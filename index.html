@@ -8,7 +8,13 @@
         </script>
         <script>
             $(function(){
-                
+                $("button").click(function(){
+                    var styleVar = $("input[name='Style']:checked").val();
+                    console.log(styleVar.string);
+                    
+                    var genderVar = $("input[name='Gender']:checked").val();
+                    console.log(genderVar.string);
+                });
             });
         </script>
     </head>
@@ -17,13 +23,13 @@
         Name: <input id="name"><br>
         Favorite Color: <input id="favColor"><br>
         Gender:<br>
-        <input type=radio name="Gender" value id="female">Female
-        <input type=radio name="Gender" value id="male">Male<br>
+        <input type=radio name="Gender" value="female" id="Female">Female
+        <input type=radio name="Gender" value="male" id="Male">Male<br>
         Class:<br>
-        <input type=radio name="Class" value id="Warrior">Warrior<br>
-        <input type=radio name="Class" value id="Mage">Mage<br>
-        <input type=radio name="Class" value id="Rogue">Rogue<br>
-        <input type=radio name="Class" value id="Healer">Healer<br>
+        <input type=radio name="Style" value="warrior" id="Warrior">Warrior<br>
+        <input type=radio name="Style" value="mage" id="Mage">Mage<br>
+        <input type=radio name="Style" value="rogue" id="Rogue">Rogue<br>
+        <input type=radio name="Style" value="healer" id="Healer">Healer<br>
         <button>Generate!</button>
     </body>
 </html>
