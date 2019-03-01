@@ -20,6 +20,37 @@
                     
                     var colorPref= $("#favColor").val();
                     console.log(colorPref);
+                    
+                    //$("img")
+                    
+                    if (genderVar == "female"){
+                        if (styleVar == "warrior"){
+                            $("img").attr("src","FeWar.png");
+                        }
+                        else if(styleVar == "mage"){
+                            $("img").attr("src","FeWiz.jpg");
+                        }
+                        else if(styleVar == "rogue"){
+                            $("img").attr("src","FeRog.png");
+                        }
+                        else if(styleVar == "healer"){
+                            $("img").attr("src","FeHea.jpg");
+                        }
+                    }
+                    else if (genderVar == "male"){
+                        if (styleVar == "warrior"){
+                            $("img").attr("src","MaWar.jpg");
+                        }
+                        else if (styleVar == "mage"){
+                            $("img").attr("src","MaWiz.png");
+                        }
+                        else if (styleVar == "rogue"){
+                            $("img").attr("src","MaRog.jpg");
+                        }
+                        else if (styleVar == "healer"){
+                            $("img").attr("src","MaHea.jpg");
+                        }
+                    };
                 });
             });
         </script>
@@ -37,5 +68,8 @@
         <input type=radio name="Style" value="rogue" id="Rogue">Rogue<br>
         <input type=radio name="Style" value="healer" id="Healer">Healer<br>
         <button>Generate!</button>
+        <h2></h2>
+        <p></p>
+        <img src></img>
     </body>
 </html>
