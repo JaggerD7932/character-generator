@@ -21,7 +21,13 @@
                     var colorPref= $("#favColor").val();
                     console.log(colorPref);
                     
-                    //$("img")
+                    $("img").css({"display":"block","margin":"auto","width":"300px","height":"400px"});
+                    
+                    $("h2").html(charName).css({"display":"block","margin":"auto","text-align":"center","color":colorPref});
+                    $("p").html("The " + styleVar).css({"display":"block","margin":"auto","text-align":"center"});
+                    
+                    $("h1").fadeOut(100);
+                    $("#First").fadeOut(100);
                     
                     if (genderVar == "female"){
                         if (styleVar == "warrior"){
@@ -57,17 +63,19 @@
     </head>
     <body>
         <h1>Working Title</h1>
-        Name: <input id="name"><br>
-        Favorite Color: <input id="favColor"><br>
-        Gender:<br>
-        <input type=radio name="Gender" value="female" id="Female">Female
-        <input type=radio name="Gender" value="male" id="Male">Male<br>
-        Class:<br>
-        <input type=radio name="Style" value="warrior" id="Warrior">Warrior<br>
-        <input type=radio name="Style" value="mage" id="Mage">Mage<br>
-        <input type=radio name="Style" value="rogue" id="Rogue">Rogue<br>
-        <input type=radio name="Style" value="healer" id="Healer">Healer<br>
-        <button>Generate!</button>
+        <div id="First">
+            Name: <input id="name"><br>
+            Favorite Color: <input id="favColor"><br>
+            Gender:<br>
+            <input type=radio name="Gender" value="female" id="Female">Female
+            <input type=radio name="Gender" value="male" id="Male">Male<br>
+            Class:<br>
+            <input type=radio name="Style" value="warrior" id="Warrior">Warrior<br>
+            <input type=radio name="Style" value="mage" id="Mage">Mage<br>
+            <input type=radio name="Style" value="rogue" id="Rogue">Rogue<br>
+            <input type=radio name="Style" value="healer" id="Healer">Healer<br>
+            <button>Generate!</button>
+        </div>
         <h2></h2>
         <p></p>
         <img src></img>
